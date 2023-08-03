@@ -1,0 +1,13 @@
+.section-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expand-btn {
+    height: 20px;
+}
+
+.section-content {
+    transition: max-height 0.2s ease-out;
+}
