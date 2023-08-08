@@ -1,7 +1,7 @@
 .section-bar {
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .expand-btn {
@@ -9,5 +9,12 @@
 }
 
 .section-content {
-    transition: max-height 0.2s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.section-content.expanded {
+    max-height: 1000px;
+    /* Adjust the value to fit your content's height */
 }

@@ -14,7 +14,10 @@ export default function ExpandableSection(props) {
         <h2>{props.title}</h2>
         <button onClick={toggleExpand} className='expand-btn'>{expanded ? '-' : '+'}</button>
       </div>
-      {expanded && <div className='section-content'>{props.children}</div>}
+      {/* {expanded && <div className='section-content'>{props.children}</div>} */}
+      <div className={`section-content ${expanded ? 'expanded' : ''}`}>
+        {props.children}
+      </div>
     </>
   )
 }

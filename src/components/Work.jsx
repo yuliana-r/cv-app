@@ -1,4 +1,5 @@
 import ExpandableSection from './ExpandableSection'
+import '../App.css'
 
 export default function Work() {
   return(

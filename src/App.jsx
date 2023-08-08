@@ -1,6 +1,6 @@
 import Personal from './components/Personal'
 import Work from './components/Work'
-import Preview from './components/Preview'
+// import Preview from './components/Preview'
 import Education from './components/Education'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -10,16 +10,16 @@ export default function App() {
   return (
     <>
       < Header />
-      <div className='main-content'>
-        <div className='left-side'>
-          < Personal />
-          < Education />
-          < Work />
-        </div>
-        <div className='right-side'>
+      {/* <div className='main-content'> */}
+      <main className='main-content'>
+        < Personal />
+        < Education />
+        < Work />
+      </main>
+      {/* <div className='right-side'>
           < Preview />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
       < Footer />
     </>
   )
