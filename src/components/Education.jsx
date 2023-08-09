@@ -75,9 +75,9 @@ export default function Education() {
   }
 
   const { degreeList, editMode } = educationList;
-  const editButton = <button onClick={handleEdit} className="edit-button">Edit</button>;
+  const editButton = <button onClick={handleEdit} className="edit-button"><i className="fa-solid fa-pen"></i> Edit</button>;
   const submitButton = <button onClick={handleSubmit} className="submit-button">Save</button>;
-  const addNewButton = <button onClick={handleAddNew} className="add-button">Add new</button>;
+  const addNewButton = <button onClick={handleAddNew} className="add-button"><i className="fa-solid fa-plus"></i> Add new</button>;
 
   const editContent = (
     <div className="education-section">

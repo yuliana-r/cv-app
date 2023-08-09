@@ -70,7 +70,7 @@ export default function WorkForm(props) {
             className={id} />
         </div>
       </form>
-      <button className={id} onClick={handleDelete}>Delete</button>
+      <button className={id} onClick={handleDelete}><i className="fa-solid fa-trash"></i> Delete</button>
     </div>
   )
 }
