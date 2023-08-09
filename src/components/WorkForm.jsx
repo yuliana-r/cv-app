@@ -1,32 +1,43 @@
 /* eslint-disable react/prop-types */
-export default function EducationForm(props) {
-  const {id, school, title, startDate, endDate, handleChange, handleDelete} = props;
-
+export default function WorkForm(props) {
+  const {id, company, role, startDate, endDate, description, handleChange, handleDelete} = props;
+  
   return(
     <div>
       <form>
-        <label htmlFor="institutionName">Institution name:</label>
+        <label htmlFor="companyName">Company name:</label>
         <input
-          id="institutionName" 
+          id="companynName" 
           type="text"
-          placeholder="e.g. Paws & Whiskers University"
-          name="school"
-          value={school}
+          placeholder="e.g."
+          name="company"
+          value={company}
           onChange={handleChange}
           className={id}
           required />
-
-        <label htmlFor="qualificationTitle">Qualification title:</label>
+  
+        <label htmlFor="jobTitle">Job title:</label>
         <input 
-          id="qualificationTitle"
+          id="jobTitle"
           type="text"
-          placeholder="e.g. Purr-fessor of Purr-formance Arts"
-          name="title"
-          value={title}
+          placeholder="e.g."
+          name="role"
+          value={role}
           onChange={handleChange}
           className={id}
           required />
 
+        <label htmlFor="jobDescription">Job description:</label>
+        <input 
+          id="jobDescription"
+          type="text"
+          placeholder="e.g."
+          name="description"
+          value={description}
+          onChange={handleChange}
+          className={id}
+          required />
+  
         <label htmlFor="startDate">Start date:</label>
         <input 
           id="startDate"
@@ -36,7 +47,7 @@ export default function EducationForm(props) {
           onChange={handleChange}
           className={id}
           required />
-
+  
         <label htmlFor="endDate">End date:</label>
         <input 
           id="endDate"

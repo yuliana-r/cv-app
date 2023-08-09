@@ -1,7 +1,9 @@
+import '../App.css'
+
 export default function Header() {
   return (
     <header>
-      <p>CV Builder</p>
+      <p className="header-title">Resume Builder</p>
     </header>
   )
 }

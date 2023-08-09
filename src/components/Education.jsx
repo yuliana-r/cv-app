@@ -11,7 +11,8 @@ export default function Education() {
       degreeList: [{
         school: '',
         title: '',
-        date: '',
+        startDate: '',
+        endDate: '',
         id: uuid()
       }]
     }
@@ -91,6 +92,7 @@ export default function Education() {
             endDate={item.endDate}
             handleChange={handleChange}
             handleDelete={handleDelete}
+            handleSubmit={handleSubmit}
             key={item.id}
           />
         })}
@@ -106,9 +108,9 @@ export default function Education() {
         {degreeList.map(item => {
           return (
             <div key={item.id}>
-              <p>{item.school}</p>
-              <p>{item.title}</p>
-              <p>{item.startDate} - {item.endDate ? item.endDate : 'Present'}</p>
+              {item.school && <p>{item.school}</p>}
+              {item.title && <p>{item.title}</p>}
+              {item.startDate && <p>{item.startDate} - {item.endDate ? item.endDate : 'Present'}</p>}
             </div>
           )
         })}
