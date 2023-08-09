@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ExpandableSection from './ExpandableSection';
-import '../App.css'
+import '../styles/index.css'
 
 export default function Personal() {
   const [personalInfo, setPersonalInfo] = useState((
@@ -54,7 +54,7 @@ export default function Personal() {
       <ExpandableSection title="Personal information">
         <form onSubmit={handleSubmit}>
           <div className='field'>
-            <label htmlFor="firstName">First name <span className='required'>*</span>:</label>
+            <label htmlFor="firstName">First name<span className='required'>*</span>:</label>
             <input
               id="firstName"
               type="text"
@@ -62,11 +62,12 @@ export default function Personal() {
               name="firstName"
               onChange={handleChange}
               value={personalInfo.firstName}
+              maxLength={20}
               required />
           </div>
           
           <div className='field'>
-            <label htmlFor="lastName">Last name <span className='required'>*</span>:</label>
+            <label htmlFor="lastName">Last name<span className='required'>*</span>:</label>
             <input
               id="lastName"
               type="text"
@@ -74,11 +75,12 @@ export default function Personal() {
               name="lastName"
               onChange={handleChange}
               value={personalInfo.lastName} 
+              maxLength={20}
               required />
           </div>
           
           <div className='field'>
-            <label htmlFor="email">Email address <span className='required'>*</span>:</label>
+            <label htmlFor="email">Email address<span className='required'>*</span>:</label>
             <input
               id="email"
               type="email"
@@ -86,11 +88,12 @@ export default function Personal() {
               name="email"
               onChange={handleChange}
               value={personalInfo.email} 
+              maxLength={30}
               required />
           </div>
           
           <div className='field'>
-            <label htmlFor="phone">Phone number <span className='required'>*</span>:</label>
+            <label htmlFor="phone">Phone number<span className='required'>*</span>:</label>
             <input
               id="phone"
               type="tel"
@@ -99,6 +102,7 @@ export default function Personal() {
               pattern="[0-9]*"
               onChange={handleChange}
               value={personalInfo.phone} 
+              maxLength={20}
               required />
           </div>
           
@@ -110,7 +114,8 @@ export default function Personal() {
               placeholder="e.g. Meow Town"
               name="location"
               onChange={handleChange}
-              value={personalInfo.location} />
+              value={personalInfo.location}
+              maxLength={25} />
           </div>
           
           <div className='field'>
@@ -118,11 +123,12 @@ export default function Personal() {
             <textarea 
               id="summary"
               name="summary"
-              placeholder="Highly independent and charismatic feline with a passion for exploration and an exceptional talent for napping."
+              placeholder="e.g. Highly independent and charismatic feline with a passion for exploration and an exceptional talent for napping."
               onChange={handleChange}
-              value={personalInfo.summary} 
-              cols="30" 
-              rows="5" />
+              value={personalInfo.summary}
+              maxLength={250} 
+              cols="36" 
+              rows="6" />
           </div>
 
           {saveButton}

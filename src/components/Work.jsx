@@ -2,7 +2,7 @@ import ExpandableSection from './ExpandableSection';
 import WorkForm from './WorkForm';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import '../App.css'
+import '../styles/index.css'
 
 export default function Work() {
   const [workList, setWorkList] = useState((
@@ -80,12 +80,11 @@ export default function Work() {
   const { jobsList, editMode } = workList;
   const editButton = <button onClick={handleEdit} className="edit-button">Edit</button>;
   const submitButton = <button onClick={handleSubmit} className="submit-button">Save</button>;
-  const addNewButton = <button onClick={handleAddNew} className="submit-button">Add new</button>;
+  const addNewButton = <button onClick={handleAddNew} className="add-button">Add new</button>;
 
   const editContent = (
     <div className="work-section">
       <ExpandableSection title="Experience">
-        {submitButton}
         {jobsList.map(item => {
           return <WorkForm 
             id={item.id}
@@ -103,6 +102,7 @@ export default function Work() {
         }
         {editMode && addNewButton}
         {!editMode && editButton}
+        {submitButton}
       </ExpandableSection>
     </div>
   )

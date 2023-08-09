@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import '../styles/ExpandableSection.css';
+import '../styles/index.css'
 
 export default function ExpandableSection(props) {
   const [expanded, setExpanded] = useState(false);

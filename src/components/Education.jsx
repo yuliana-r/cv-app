@@ -2,7 +2,7 @@ import ExpandableSection from './ExpandableSection';
 import EducationForm from './EducationForm';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import '../App.css'
+import '../styles/index.css'
 
 export default function Education() {
   const [educationList, setEducationList] = useState((
@@ -77,12 +77,11 @@ export default function Education() {
   const { degreeList, editMode } = educationList;
   const editButton = <button onClick={handleEdit} className="edit-button">Edit</button>;
   const submitButton = <button onClick={handleSubmit} className="submit-button">Save</button>;
-  const addNewButton = <button onClick={handleAddNew} className="submit-button">Add new</button>;
+  const addNewButton = <button onClick={handleAddNew} className="add-button">Add new</button>;
 
   const editContent = (
     <div className="education-section">
       <ExpandableSection title="Education">
-        {submitButton}
         {degreeList.map(item => {
           return <EducationForm 
             id={item.id}
@@ -98,6 +97,7 @@ export default function Education() {
         })}
         {editMode && addNewButton}
         {!editMode && editButton}
+        {submitButton}
       </ExpandableSection>
     </div>
   )
