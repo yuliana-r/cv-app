@@ -1,9 +1,14 @@
 # CV Builder Application
 ## Introduction 
 
+This project is a webpage of an editable resume application which uses the React library.
+
+The project primarily demonstrates use of basic structures in React, including elements, components, props, and state, in order to build a functional user interface.
+
 ## Preview
 
-<!-- [![CV App](./src/assets/demo.png)](https://yuliana-r.github.io/cv-app/) -->
+[![CV App](./src/assets/demo1.png)](https://yuliana-r.github.io/cv-app/)
+[![CV App](./src/assets/demo2.png)](https://yuliana-r.github.io/cv-app/)
 
 ## Media & assets credits:
 
