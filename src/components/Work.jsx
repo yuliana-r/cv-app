@@ -2,6 +2,7 @@ import ExpandableSection from './ExpandableSection';
 import WorkForm from './WorkForm';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
+import { format } from 'date-fns';
 import '../styles/index.css'
 
 export default function Work() {
@@ -100,28 +101,39 @@ export default function Work() {
           />
         })
         }
-        {editMode && addNewButton}
+        <div className='section-buttons'>
+          {editMode && addNewButton}
+          {submitButton}
+        </div>
+        
         {!editMode && editButton}
-        {submitButton}
+        
       </ExpandableSection>
     </div>
   )
 
   const submittedContent = (
     <div className="work-section">
-      <ExpandableSection title="Experience">
+      {/* <ExpandableSection title="Experience"> */}
+      <div className="preview-bar">
+        <h2>Experience</h2>
+        {editButton}
+      </div>
+      <div className='preview-work'>
         {jobsList.map(item => {
           return (
-            <div key={item.id}>
-              {item.company && <p>{item.company}</p>}
-              {item.role && <p>{item.role}</p>}
-              {item.description && <p>{item.description}</p>}
-              {item.startDate && <p>{item.startDate} - {item.endDate ? item.endDate : 'Present'}</p>}
+            <div className='preview-job' key={item.id}>
+              <div className='preview-job-info'>
+                {item.company && <p className='company-title'>{item.company}</p>}
+                {item.role && <p className='job-title'>{item.role}</p>}
+                {item.description && <p className='job-desc'>{item.description}</p>}
+              </div>
+              {item.startDate && <p>{format(new Date(item.startDate),'MMM yyyy')} - {item.endDate ? format(new Date(item.endDate),'MMM yyyy') : 'Present'}</p>}
             </div>
           )
         })}
-        {!editMode && editButton}
-      </ExpandableSection>
+      </div>
+      {/* </ExpandableSection> */}
     </div>
   )
 

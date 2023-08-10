@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../styles/index.css'
 
 export default function ExpandableSection(props) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const toggleExpand = () => {
     setExpanded(!expanded);
   };

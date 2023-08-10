@@ -1,7 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Gloria+Hallelujah&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Gloria+Hallelujah&family=Raleway:wght@200;400;600&display=swap');
 
-/* font-family: 'Roboto',
-sans-serif; */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url('../src/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  min-width: 465px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fa-user,
+.fa-graduation-cap,
+.fa-briefcase,
+.fa-trash,
+.fa-plus,
+.fa-pen {
+  width: 35px;
+  margin-left: 0;
+}
+
+input,
+textarea {
+  width: 60%;
+  margin: 5px 0 5px auto;
+  padding: 3px 5px 3px 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+textarea {
+  resize: none;
+}
+
+
+/* Header */
+
 header {
   background-color: #b7b0c7;
   font-size: 3.5rem;
@@ -9,9 +62,16 @@ header {
   font-family: 'Cherry Bomb One', cursive;
   color: #fbfbfb;
   pointer-events: none;
-  box-shadow: 0 6px 10px #d4d0dd;
+  box-shadow: 0 4px 8px #d4d0dd;
 }
 
+.header-title {
+  text-shadow: 0 1px 5px #66626f;
+  letter-spacing: 2px;
+}
+
+
+/* Main */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -69,7 +129,7 @@ header {
 
 .section-content {
   width: 80%;
-  background-color: rgb(239, 237, 225, 0.6);
+  background-color: rgba(239, 237, 225, 0.6);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
@@ -79,9 +139,12 @@ header {
   border: 1px solid #d1cfc3;
 }
 
+.section-buttons {
+  display: flex;
+}
 
 .section-content.expanded {
-  max-height: 100%;
+  max-height: 2000px;
 }
 
 .degree-form,
@@ -89,67 +152,43 @@ header {
   border-bottom: 2px dashed #a7a69c;
 }
 
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  height: 100%;
-}
-
-span {
-  color: red;
-}
-
-body {
-  background-image: url('../src/assets/background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  margin: 0;
-  height: 100vh;
-}
-
-i {
-  width: 35px;
-  margin-left: 0;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-input,
-textarea {
-  width: 300px;
-  margin: 5px;
-  padding: 3px 0 3px 10px;
+/* Buttons */
+.submit-button,
+.add-button,
+.edit-button,
+.job-form>button,
+.degree-form>button {
   font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-}
-
-textarea {
-  resize: none;
+  font-size: 1em;
+  padding: 5px 15px;
+  border-radius: 3px;
+  margin: 10px 0 10px auto;
+  display: flex;
+  color: #fbfbfb;
+  cursor: pointer;
+  border: 1px solid;
 }
 
 .submit-button {
   background-color: #667e65;
-  color: #fbfbfb;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  padding: 5px 15px;
-  border: 1px solid #5c715b;
-  border-radius: 3px;
-  margin: 10px 10px 10px auto;
-  align-self: flex-end;
+  border-color: #5c715b;
+}
+
+.add-button {
+  background-color: #928d9f;
+  border-color: #837f8f;
+  margin: 10px auto 10px 0;
+}
+
+.edit-button {
+  background-color: #7895B2;
+  border-color: #6c86a0;
+}
+
+.job-form>button,
+.degree-form>button {
+  background-color: #965050;
+  border-color: #874848;
 }
 
 .submit-button:hover,
@@ -157,44 +196,92 @@ textarea {
 .edit-button:hover,
 .job-form>button:hover,
 .degree-form>button:hover {
-  cursor: grab;
   opacity: 0.9;
+  transform: scale(1.05);
 }
 
-.add-button {
-  background-color: #928d9f;
-  color: #fbfbfb;
+/* Preview */
+.preview-personal,
+.preview-education,
+.preview-work {
   font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  padding: 5px 15px;
-  border: 1px solid #837f8f;
-  border-radius: 3px;
-  margin: 10px;
+  margin: 15px 0;
+  width: 80%;
+  background-color: white;
+  min-width: 460px;
 }
 
-.edit-button {
-  background-color: #7895B2;
-  color: #fbfbfb;
+.preview-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
   font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  padding: 5px 15px;
-  border: 1px solid #6c86a0;
-  border-radius: 3px;
-  margin: 10px;
+  color: #3f3e42;
+  min-width: 460px;
 }
 
-.job-form>button,
-.degree-form>button {
-  background-color: #965050;
-  color: #fbfbfb;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  padding: 5px 15px;
-  border: 1px solid #874848;
-  border-radius: 3px;
-  margin: 10px;
+.preview-personal {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
+.preview-name {
+  text-align: center;
+}
+
+.preview-contact-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.75em;
+}
+
+.preview-education,
+.preview-work {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.preview-degree,
+.preview-job {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.preview-school-title>*,
+.preview-job-info>* {
+  margin-bottom: 7px;
+}
+
+.degree-title,
+.job-title {
+  font-style: italic;
+}
+
+.uni-title,
+.company-title {
+  font-weight: 600;
+}
+
+.preview-job-info {
+  width: 60%;
+}
+
+.job-desc {
+  overflow-wrap: break-word;
+  font-weight: 200;
+}
+
+.personal-summary,
+.job-desc {
+  text-align: justify;
+}
+
+/* Footer */
 footer {
   user-select: none;
   display: flex;
@@ -203,13 +290,14 @@ footer {
   align-items: center;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
-  gap: 10px;
+  gap: 0.4em;
   padding: 1em 0 0.5em;
   letter-spacing: 2px;
 }
 
 .fa-github {
   font-size: 20px;
+  color: #a59eb3;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -217,9 +305,44 @@ footer {
   transform: rotate(360deg) scale(1.2);
 }
 
+/* Media Queries */
 @media (max-width: 850px) {
+
+  .preview-personal,
+  .preview-education,
+  .preview-work,
+  .preview-bar {
+    width: 95%;
+  }
+
+  input,
+  textarea {
+    width: 300px;
+  }
 
   .field {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-content.expanded {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-buttons {
+    justify-content: space-between;
+  }
+
+  .personal-section,
+  .education-section,
+  .work-section {
+    width: 95%;
   }
 }

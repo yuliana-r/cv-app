@@ -46,7 +46,7 @@ export default function Personal() {
   }
 
   const {firstName, lastName, email, phone, location, summary, editMode} = personalInfo;
-  const editButton = <button onClick={handleEdit} className="edit-button">Edit</button>;
+  const editButton = <button onClick={handleEdit} className="edit-button"><i className="fa-solid fa-pen"></i> Edit</button>;
   const saveButton = <button className="submit-button">Save</button>;
 
   const editContent = (
@@ -97,7 +97,7 @@ export default function Personal() {
             <input
               id="phone"
               type="tel"
-              placeholder="e.g. 07575 123456"
+              placeholder="e.g. 07575123456"
               name="phone"
               pattern="[0-9]*"
               onChange={handleChange}
@@ -139,14 +139,25 @@ export default function Personal() {
 
   const submittedContent = (
     <div className='personal-section'>
-      <ExpandableSection title="Personal information">
-        <h1>{firstName.toUpperCase()} {lastName.toUpperCase()}</h1>
-        <p>{email}</p>
-        <p>{phone}</p>
-        {location.length > 0 && <p>{location}</p>}
-        {summary.length > 0 && <p>{summary}</p>}
+      {/* <ExpandableSection title="Personal information"> */}
+      
+      <div className='preview-bar'>
+        {/* <h2>Personal information</h2> */}
         {editButton}
-      </ExpandableSection>
+      </div>
+      <div className='preview-personal'>
+        <h1 className='preview-name'>{firstName.toUpperCase()} {lastName.toUpperCase()}</h1>
+        <div className='preview-contact-info'>
+          <p>{email}</p>
+          <p>|</p>
+          <p>{phone}</p>
+          <p>|</p>
+          {location.length > 0 && <p>{location}</p>}
+        </div>
+        
+        {summary.length > 0 && <p className='personal-summary'>{summary}</p>}
+      </div>
+      {/* </ExpandableSection> */}
     </div>
   )
 

@@ -10,7 +10,7 @@ export default function WorkForm(props) {
           <input
             id="companynName" 
             type="text"
-            placeholder="e.g."
+            placeholder="e.g. WhiskerWonders Corp"
             name="company"
             value={company}
             onChange={handleChange}
@@ -23,7 +23,7 @@ export default function WorkForm(props) {
           <input 
             id="jobTitle"
             type="text"
-            placeholder="e.g."
+            placeholder="e.g. Director of Mischief"
             name="role"
             value={role}
             onChange={handleChange}
@@ -36,7 +36,7 @@ export default function WorkForm(props) {
           <textarea
             id="jobDescription"
             type="text"
-            placeholder="e.g."
+            placeholder="e.g. Masterfully orchestrated office antics, spontaneous zoomies, and playful pawmanship to cultivate a vibrant and creatively chaotic work atmosphere."
             name="description"
             value={description}
             onChange={handleChange}
