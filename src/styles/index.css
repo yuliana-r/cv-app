@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: url('../src/assets/background.jpg');
+  background: url('../assets/background.jpg');
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
