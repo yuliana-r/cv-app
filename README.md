@@ -12,6 +12,6 @@ The project primarily demonstrates use of basic structures in React, including e
 
 ## Media & assets credits:
 
-1. Flaticon (Freepik): https://www.flaticon.com/free-icons/cv
+1. Flaticon (Dragon Icons): https://www.flaticon.com/free-icons/files-and-folders
 
 2. Wallpaper Access: https://wallpaperaccess.com/minimalist-pattern 
