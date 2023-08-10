@@ -7,8 +7,8 @@ The project primarily demonstrates use of basic structures in React, including e
 
 ## Preview
 
-[![CV App](./src/assets/demo1.png)](https://yuliana-r.github.io/cv-app/)
-[![CV App](./src/assets/demo2.png)](https://yuliana-r.github.io/cv-app/)
+[![CV App](./src/assets/demo1.png)](https://resume-builder-yuliana-r.netlify.app/)
+[![CV App](./src/assets/demo2.png)](https://resume-builder-yuliana-r.netlify.app/)
 
 ## Media & assets credits:
 
