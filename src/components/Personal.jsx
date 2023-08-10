@@ -149,10 +149,9 @@ export default function Personal() {
           <p>{email}</p>
           <p>|</p>
           <p>{phone}</p>
-          <p>|</p>
+          {location.length > 0 && <p>|</p>}
           {location.length > 0 && <p>{location}</p>}
         </div>
-        
         {summary.length > 0 && <p className='personal-summary'>{summary}</p>}
       </div>
     </div>
