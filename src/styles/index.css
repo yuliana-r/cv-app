@@ -55,7 +55,6 @@ textarea {
   resize: none;
 }
 
-
 /* Header */
 
 header {
@@ -70,7 +69,7 @@ header {
 
 .header-title {
   text-shadow: 0 1px 5px #66626f;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 
@@ -96,6 +95,7 @@ header {
   color: #3f3e42;
   border-radius: 3px;
   border: 2px solid #d1cfc3;
+  letter-spacing: 3px;
 }
 
 .expand-btn {
@@ -170,6 +170,13 @@ header {
   color: #fbfbfb;
   cursor: pointer;
   border: 1px solid;
+}
+
+.add-button,
+.edit-button,
+.job-form>button,
+.degree-form>button {
+  padding-left: 0;
 }
 
 .submit-button {
