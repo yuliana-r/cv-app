@@ -109,7 +109,6 @@ export default function Education() {
 
   const submittedContent = (
     <div className="education-section">
-      {/* <ExpandableSection title="Education"> */}
       <div className='preview-bar'>
         <h2>Education</h2>
         {editButton}
@@ -127,7 +126,6 @@ export default function Education() {
           )
         })}
       </div>
-      {/* </ExpandableSection> */}
     </div>
   )
 

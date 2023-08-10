@@ -114,7 +114,6 @@ export default function Work() {
 
   const submittedContent = (
     <div className="work-section">
-      {/* <ExpandableSection title="Experience"> */}
       <div className="preview-bar">
         <h2>Experience</h2>
         {editButton}
@@ -133,7 +132,6 @@ export default function Work() {
           )
         })}
       </div>
-      {/* </ExpandableSection> */}
     </div>
   )
 

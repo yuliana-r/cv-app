@@ -1,7 +1,7 @@
 # CV Builder Application
 ## Introduction 
 
-This project is a webpage of an editable resume application which uses the React library.
+This project is a webpage of an editable resume application which uses the React library and is bundled using Vite.
 
 The project primarily demonstrates use of basic structures in React, including elements, components, props, and state, in order to build a functional user interface.
 

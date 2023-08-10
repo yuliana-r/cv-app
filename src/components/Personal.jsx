@@ -139,10 +139,8 @@ export default function Personal() {
 
   const submittedContent = (
     <div className='personal-section'>
-      {/* <ExpandableSection title="Personal information"> */}
       
       <div className='preview-bar'>
-        {/* <h2>Personal information</h2> */}
         {editButton}
       </div>
       <div className='preview-personal'>
@@ -157,14 +155,10 @@ export default function Personal() {
         
         {summary.length > 0 && <p className='personal-summary'>{summary}</p>}
       </div>
-      {/* </ExpandableSection> */}
     </div>
   )
 
   return(
-    // <div>
     editMode ? editContent : submittedContent
-    // </div>
-    
   )
 }
