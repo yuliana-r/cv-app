@@ -1,4 +1,4 @@
-# CV Builder Application
+# Resume Builder
 ## Introduction 
 
 This project is a webpage of an editable resume application which uses the React library and is bundled using Vite.
